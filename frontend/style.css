@@ -1,0 +1,54 @@
+/* Shared styles for login.html and exam.html */
+:root {
+  --ink: #1f2933;
+  --muted: #5f6c7b;
+  --line: #c5ced8;
+  --accent: #1d4e89;
+  --accent-dark: #143a68;
+  --bg: #f5f7fa;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  max-width: 600px;
+  margin: auto;
+  padding: 48px 20px;
+  line-height: 1.5;
+}
+
+h1 { font-size: 1.8rem; margin-bottom: 4px; }
+h2 { font-size: 1.2rem; font-weight: normal; }
+p.hint { color: var(--muted); margin-top: 0; }
+
+form { display: flex; flex-direction: column; gap: 6px; margin-top: 24px; }
+label { font-weight: bold; margin-top: 12px; }
+
+input, textarea {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #fff;
+}
+input:focus, textarea:focus, button:focus-visible {
+  outline: 3px solid #9cc2ee;
+  border-color: var(--accent);
+}
+
+textarea { min-height: 260px; resize: vertical; }
+
+button {
+  margin-top: 20px;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background: var(--accent);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+button:hover { background: var(--accent-dark); }

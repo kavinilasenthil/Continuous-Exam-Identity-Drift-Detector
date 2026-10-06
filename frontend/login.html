@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Exam Portal - Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Exam Portal</h1>
+  <p class="hint">Enter your details to begin. Your identity is verified continuously during the exam.</p>
+
+  <form id="login-form">
+    <label for="student-id">Name or ID</label>
+    <input type="text" id="student-id" name="student-id" placeholder="e.g. 21CS042" required>
+
+    <label for="access-code">Access code</label>
+    <input type="password" id="access-code" name="access-code" placeholder="Code given by your invigilator" required>
+
+    <button type="button" onclick="startExam()">Start Exam</button>
+  </form>
+
+  <script>
+    // Placeholder: no real authentication yet. Just moves to the exam page.
+    function startExam() {
+      window.location.href = 'exam.html';
+    }
+  </script>
+</body>
+</html>
