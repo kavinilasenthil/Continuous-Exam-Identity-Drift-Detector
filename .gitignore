@@ -1,3 +1,5 @@
    __pycache__/
    *.pyc
    temp_mouse.csv
+temp_mouse.csv
+*.pyc
