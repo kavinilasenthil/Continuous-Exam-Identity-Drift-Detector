@@ -18,6 +18,21 @@
   </form>
 
   <script>
+      // ---- Mouse capture (Member 2) ----
+      let mouseEvents = [];
+      window.mouseEvents = mouseEvents;
+      let lastMoveLogged = 0;
+
+      document.addEventListener('mousemove', function (e) {
+        const now = performance.now();
+        if (now - lastMoveLogged < 30) return;   // roughly every 30ms
+        lastMoveLogged = now;
+        mouseEvents.push({event_type: 'move', x: e.clientX, y: e.clientY, timestamp: now});
+      });
+
+      document.addEventListener('click', function (e) {
+        mouseEvents.push({event_type: 'click', x: e.clientX, y: e.clientY, timestamp: performance.now()});
+      });
     // Placeholder: real submission to the backend comes in Week 4.
     function submitAnswer() {
       alert('Answer submitted! (not yet connected to backend)');
