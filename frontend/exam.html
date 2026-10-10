@@ -18,6 +18,17 @@
   </form>
 
   <script>
+      // ---- Keystroke capture (Member 1) ----
+      let keystrokeEvents = [];
+      window.keystrokeEvents = keystrokeEvents;
+
+      document.getElementById('answer').addEventListener('keydown', function (e) {
+        keystrokeEvents.push({key: e.key, event_type: 'keydown', timestamp: performance.now()});
+      });
+
+      document.getElementById('answer').addEventListener('keyup', function (e) {
+        keystrokeEvents.push({key: e.key, event_type: 'keyup', timestamp: performance.now()});
+      });
       // ---- Mouse capture (Member 2) ----
       let mouseEvents = [];
       window.mouseEvents = mouseEvents;
